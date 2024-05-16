@@ -1,0 +1,57 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "versao": "2.4 MPFI ADVANTAGE 4X2 8V FLEX 4P MANUAL",
+      "anoFabricacao": 2009,
+      "anoModelo": 2010,
+      "cor": "Amarelo",
+      "blindado": true,
+      "kilometragem": 32000,
+      "placa": "HEN0436",
+      "renavam": 69957194550
+    },
+    {
+      "id": 2,
+      "marca": "NISSAN",
+      "modelo": "LEAF",
+      "versao": "B12P 40 ELÉTRICO",
+      "anoFabricacao": 2021,
+      "anoModelo": 2022,
+      "cor": "Preto",
+      "blindado": false,
+      "kilometragem": 11348,
+      "placa": "HEN0436",
+      "renavam": 76666847185
+    },
+    {
+      "id": 3,
+      "marca": "HYUNDAI",
+      "modelo": "HB20",
+      "versao": "1.0 12V FLEX EVOLUTION MANUAL",
+      "anoFabricacao": 2020,
+      "anoModelo": 2020,
+      "cor": "Branco",
+      "blindado": false,
+      "kilometragem": 33060,
+      "placa": "MON6559",
+      "renavam": 82961870820
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "nome": "ADM",
+      "senha": "1234",
+      "type": "adm"
+    },
+    {
+      "id": 2,
+      "nome": "ADM2",
+      "senha": "12345",
+      "type": "view"
+    }
+  ]
+}
