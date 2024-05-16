@@ -1,13 +1,28 @@
-.mat-card{
-  margin-top:100px ;
-  max-width: 100%;
-  .mat-card-header{
-    .mat-card-title{
-      color: 333333;
-    }
-    .mat-card-subtitle{
-      color: rgb(36, 36, 36);
+.card {
+  width: 1,232px;
+  height: 131px;
+  padding: 16px 24px 16px 24px;
+  gap: 8px;
+  opacity: 0px;
 
+    .card-title {
+      //styleName: H4/medium;
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      text-align: left;
+      color: #000000D9;
     }
-  }
+
+    .card-subtitle {
+      padding: 16px 0;
+      font-family: Helvetica Neue;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 17.03px;
+      text-align: left;
+      color: #333333;
+    }
+
 }
