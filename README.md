@@ -18,7 +18,7 @@
 
 1. Clone o repositório do projeto:
 
-git clone https://github.com/EuderAlves/fleet-fe.git
+git clone https://github.com/EuderAlves/Fleet-app.git
 
 2. Navegue para a pasta do projeto:
 
@@ -47,7 +47,7 @@ npm start
 A API utilizada pelo FLEET está na pasta api--fleet-fake. Para executá-la, siga os passos:
 
 1. Clone o repositório do projeto:
-   git clone https://github.com/EuderAlves/api-fleet.git
+   git clone https://github.com/EuderAlves/Fleet-app.git
 
 2. Navegue para a pasta api-fleet:
 
