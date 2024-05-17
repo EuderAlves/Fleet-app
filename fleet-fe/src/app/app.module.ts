@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { CardsComponent } from './shared/cards/cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BuscaComponent } from './shared/busca/busca.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     BannerComponent,
     HomeComponent,
     ContainerComponent,
-    CardsComponent
+    CardsComponent,
+    BuscaComponent
   ],
   imports: [
     BrowserModule,
