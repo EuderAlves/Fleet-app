@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BuscaComponent } from './shared/busca/busca.component';
 import { ModalComponent } from './shared/modal/modal.component';
 
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+
 
 @NgModule({
   declarations: [
@@ -31,9 +33,13 @@ import { ModalComponent } from './shared/modal/modal.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [
+    provideNgxMask()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

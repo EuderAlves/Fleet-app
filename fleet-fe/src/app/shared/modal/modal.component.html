@@ -1,1 +1,90 @@
-<p>modal works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+        <div class="row col-12">
+          <div class="d-flex titulo">
+            <mat-icon class="iconeModal">add</mat-icon>
+            <h1 mat-dialog-title>Add novo veiculo</h1>
+          </div>
+        </div>
+
+        <div class="row col-12">
+          <form [formGroup]="formGroup">
+            <div class="row col-12">
+              <div class="d-flex justify-content-center">
+                <div></div>
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Marca</mat-label>
+                  <input matInput formControlName="marca" style="text-transform: uppercase">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Modelo</mat-label>
+                  <input matInput formControlName="modelo" style="text-transform: uppercase">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row col-12">
+              <div class="d-flex justify-content-center">
+                <mat-form-field appearance="outline" class="col-12 p-2">
+                  <mat-label>Versão</mat-label>
+                  <input matInput formControlName="versao">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row col-12">
+              <div class="d-flex justify-content-center">
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Ano Fabricação</mat-label>
+                  <input matInput type="number" mask="0000" formControlName="anoFabricacao">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Ano Modelo</mat-label>
+                  <input matInput type="number" mask="0000" formControlName="anoModelo">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row col-12">
+              <div class="d-flex justify-content-center">
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Cor</mat-label>
+                  <input matInput formControlName="cor">
+                </mat-form-field>
+                <mat-checkbox class="checkBox" class="col-6 p-2" color="primary"  formControlName="blindado">É Blindado</mat-checkbox>
+              </div>
+            </div>
+
+            <div class="row col-12">
+              <div class="d-flex justify-content-center" >
+                <mat-form-field appearance="outline" class="col-12 p-2">
+                  <mat-label>Kilometragem</mat-label>
+                  <input matInput type="number" formControlName="kilometragem">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row col-12">
+              <div class="d-flex justify-content-center">
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Placa</mat-label>
+                  <input matInput formControlName="placa">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-6 p-2">
+                  <mat-label>Renavam</mat-label>
+                  <input matInput formControlName="renavam">
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      <mat-dialog-actions align="end">
+        <button class="botao-cancel" mat-stroked-button  mat-dialog-close>Cancel</button>
+        <button class="botao-adicionar" mat-raised-button (click)="salvar()"><mat-icon>add</mat-icon>Add</button>
+      </mat-dialog-actions>
+    </div>
+  </div>
+</div>

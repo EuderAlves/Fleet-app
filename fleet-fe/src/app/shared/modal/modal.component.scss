@@ -1,0 +1,32 @@
+.container{
+width: 1480px;
+}
+.titulo {
+  padding-top: 54px;
+  padding-left: 24px;
+}
+
+.iconeModal {
+  margin: 21px -10px 0px 54px;
+}
+
+.input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.botao-salvar {
+  margin-top: 10px;
+  width: 70%;
+  padding: 6.4px 15px 6.4px 15px;
+  background-color: #096DD9 !important;
+  color: #FFFFFF !important;
+}
+
+.botao-cancel{
+  padding: 6.4px 15px 6.4px 15px;
+  border: 1px 0px 0px 0px #FF4D4F;
+  opacity: 0px;
+  color: #FF4D4F;
+}
