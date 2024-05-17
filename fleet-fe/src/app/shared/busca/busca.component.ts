@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Veiculos } from 'src/app/model/veiculos.model';
 import { ModalComponent } from '../modal/modal.component';
@@ -8,23 +8,19 @@ import { ModalComponent } from '../modal/modal.component';
   templateUrl: './busca.component.html',
   styleUrls: ['./busca.component.scss']
 })
-export class BuscaComponent implements OnInit {
+export class BuscaComponent  {
   @Input() listaVeiculos: Veiculos[] = [];
-  @Output() newListVeiculos =  new EventEmitter<Veiculos[]>();;
+  @Output() newListVeiculos =  new EventEmitter<Veiculos[]>();
 
   public buscar!: string | number;
 
   constructor(public dialog: MatDialog) { }
 
-  ngOnInit(): void {
-
-
-  }
 
   filtroVeiculos(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
     if (filterValue != undefined) {
-      let newLista:Veiculos[] = this.listaVeiculos.filter((el) =>
+      const newLista:Veiculos[] = this.listaVeiculos.filter((el) =>
         el.marca.includes(filterValue) ||
         el.modelo.includes(filterValue) ||
         el.versao.includes(filterValue) ||

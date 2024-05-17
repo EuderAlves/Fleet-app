@@ -82,3 +82,6 @@ Para filtrar os veiculos em `GET /veiculos`, é possível:
 - fazer uma busca por placas individuais utilizando a query string `?placa=:busca`.
 
 **Com o FLEET, você terá o controle total da sua frota de veículos seminovos, otimizando a gestão e aumentando a produtividade.**
+
+EsLint 100% :
+![alt text](image.png)

@@ -24,8 +24,8 @@ export class SwalUtils {
 
   showConfirm(
     title: string,
-    confirmButtonText: string = 'Sim',
-    cancelButtonText: string = 'Não'
+    confirmButtonText = 'Sim',
+    cancelButtonText = 'Não'
   ): Promise<SweetAlertResult> {
     return Swal.fire({
       position: 'center',
