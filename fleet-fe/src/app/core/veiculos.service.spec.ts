@@ -3,14 +3,13 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { VeiculosService } from './veiculos.service';
 import { Veiculos } from '../model/veiculos.model';
-import { catchError, throwError } from 'rxjs';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 const mockHttpClient = jasmine.createSpyObj('HttpClient', ['get', 'post', 'delete']);
 
 describe('VeiculosService', () => {
   let service: VeiculosService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let httpClient: HttpClient;
 
   beforeEach(() => {
@@ -30,9 +29,7 @@ describe('VeiculosService', () => {
   });
 
   it('should return a list of vehicles (success)', () => {
-
     expect(service.listarVeituclos()).toBeUndefined();
-
   });
 
   it('should create a new vehicle (success)', () => {
@@ -49,8 +46,6 @@ describe('VeiculosService', () => {
     };
     expect(service.salvarNovoVeiculo(newVeiculo)).toBeUndefined();
   });
-
-
 
  it("should delete vehicle", ()=>{
   const newVeiculo: Veiculos = {
