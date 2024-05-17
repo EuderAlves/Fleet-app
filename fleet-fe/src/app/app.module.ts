@@ -13,6 +13,7 @@ import { CardsComponent } from './shared/cards/cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BuscaComponent } from './shared/busca/busca.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

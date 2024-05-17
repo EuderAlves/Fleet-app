@@ -1,1 +1,12 @@
-<p>busca works!</p>
+<mat-card class="card-busca">
+  <div class="row">
+    <div class="col-9 d-flex justify-content-center">
+      <mat-form-field appearance="outline" class="buscar">
+        <mat-label>Busca</mat-label>
+        <span matPrefix><mat-icon class="icone-busca">search</mat-icon></span>
+        <input  matInput (keyup)="filtroVeiculos($event)">
+      </mat-form-field>
+    </div>
+    <div class="col-3"><button class="botao-adicionar" mat-raised-button  (click)="adicionar()"><mat-icon>add</mat-icon>Add</button></div>
+  </div>
+</mat-card>
