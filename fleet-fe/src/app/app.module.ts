@@ -10,6 +10,7 @@ import { BannerComponent } from './shared/banner/banner.component';
 import { HomeComponent } from './home/home.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { CardsComponent } from './shared/cards/cards.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardsComponent } from './shared/cards/cards.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
