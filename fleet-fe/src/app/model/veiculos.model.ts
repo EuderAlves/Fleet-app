@@ -2,6 +2,7 @@ export interface Veiculos{
     id: number,
     marca: string,
     modelo: string,
+    versao: string,
     anoFabricacao: number,
     anoModelo: number,
     cor: string,

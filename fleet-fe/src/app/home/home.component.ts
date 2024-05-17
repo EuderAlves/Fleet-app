@@ -16,10 +16,7 @@ export class HomeComponent implements OnInit {
   }
   listarVeiculos() {
     this.veiculosService.listarVeituclos().subscribe((resp) => {
-      console.log(resp)
       this.listaVeiculos = resp
-      console.log(this.listaVeiculos)
-
     })
   }
 }
