@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Veiculos } from 'src/app/model/veiculos.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { Veiculos } from 'src/app/model/veiculos.model';
 })
 export class BuscaComponent implements OnInit {
   @Input() listaVeiculos: Veiculos[] = [];
-  @Output() newListVeiculos: Veiculos[] = [];
+  @Output() newListVeiculos =  new EventEmitter<Veiculos[]>();;
 
   public buscar!: string | number;
 
@@ -21,9 +21,8 @@ export class BuscaComponent implements OnInit {
 
   filtroVeiculos(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
-    debugger;
     if (filterValue != undefined) {
-      this.newListVeiculos = this.listaVeiculos.filter((el) =>
+      let newLista:Veiculos[] = this.listaVeiculos.filter((el) =>
         el.marca.includes(filterValue) ||
         el.modelo.includes(filterValue) ||
         el.versao.includes(filterValue) ||
@@ -34,6 +33,7 @@ export class BuscaComponent implements OnInit {
         el.placa.toString().includes(filterValue)||
         el.renavam.toString().includes(filterValue)
       )
+      this.newListVeiculos.emit(newLista)
     }
   }
   adicionar(){

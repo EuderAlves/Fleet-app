@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public listaVeiculos!: Veiculos[];
+  public listaVeiculos: Veiculos[] = [];
+  public listaAtualizadaVeiculos: Veiculos[] = [];
   constructor(private veiculosService: VeiculosService) { }
 
   ngOnInit(): void {
@@ -17,6 +18,12 @@ export class HomeComponent implements OnInit {
   listarVeiculos() {
     this.veiculosService.listarVeituclos().subscribe((resp) => {
       this.listaVeiculos = resp
+      this.listaAtualizadaVeiculos = resp
     })
+  }
+  newListVwiculos(listaAtualizada: Veiculos[]) {
+    if (this.listaVeiculos !== listaAtualizada) {
+      this.listaAtualizadaVeiculos = listaAtualizada
+    }
   }
 }
