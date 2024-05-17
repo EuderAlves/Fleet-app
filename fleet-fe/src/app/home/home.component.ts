@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     })
   }
   newListVwiculos(listaAtualizada: Veiculos[]) {
+    this.listaAtualizadaVeiculos = []
     if (this.listaVeiculos !== listaAtualizada) {
       this.listaAtualizadaVeiculos = listaAtualizada
     }

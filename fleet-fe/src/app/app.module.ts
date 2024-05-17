@@ -1,3 +1,4 @@
+import { SwalUtils } from './utils/SwalUtils';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,9 +36,11 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     MaterialModule,
     HttpClientModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
   ],
   providers: [
+    HomeComponent,
+    SwalUtils,
     provideNgxMask()
   ],
   bootstrap: [AppComponent]

@@ -1,7 +1,9 @@
+import { SwalUtils } from './../../utils/SwalUtils';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { VeiculosService } from 'src/app/core/veiculos.service';
-
+import { HomeComponent } from 'src/app/home/home.component';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -12,7 +14,10 @@ export class ModalComponent implements OnInit {
 
   constructor(
     private formiBuilder: FormBuilder,
-    private veiculosService: VeiculosService
+    private veiculosService: VeiculosService,
+    private dialogRef: MatDialogRef<ModalComponent>,
+    private homeComponent: HomeComponent,
+    private swall: SwalUtils
   ) {
     this.formGroup = this.formiBuilder.group({
       marca: [null, Validators.required],
@@ -33,12 +38,18 @@ export class ModalComponent implements OnInit {
   }
 
   salvar() {
-    if(this.formGroup.valid){
-      this.veiculosService.salvarNovoVeiculo(this.formGroup.value).subscribe((resp)=>{
-        resp
+    if (this.formGroup.valid) {
+      this.veiculosService.salvarNovoVeiculo(this.formGroup.value).subscribe((resp) => {
+        this.swall.showSuccessMessage("Veiculo novo salvo com sucesso")
+        this.dialogRef.close();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+
+      }, (err) => {
+        this.swall.showGenericWaring("Ocorreu um erro ao salvar")
       })
     }
-    console.log(this.formGroup.value)
 
   }
 }
