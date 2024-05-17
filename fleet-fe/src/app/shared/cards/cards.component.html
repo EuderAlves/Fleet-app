@@ -1,8 +1,8 @@
 <mat-card class="card">
   <div class="row col-12">
     <div class="d-flex justify-content-between">
-      <div class="col-9 marca"><strong>{{marca}}</strong>
-        <span class="modelo">{{modelo}}</span>
+      <div class="col-9 marca"><strong>{{marca.toLocaleUpperCase()}}</strong>
+        <span class="modelo">{{modelo.toLocaleUpperCase()}}</span>
       </div>
       <div class="col-3"><button class="botao-remove" mat-stroked-button (click)="remover(id)"><mat-icon>delete</mat-icon>Remove</button></div>
     </div>

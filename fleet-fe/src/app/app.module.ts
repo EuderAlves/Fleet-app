@@ -12,6 +12,7 @@ import { ContainerComponent } from './shared/container/container.component';
 import { CardsComponent } from './shared/cards/cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BuscaComponent } from './shared/busca/busca.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BuscaComponent } from './shared/busca/busca.component';
     HomeComponent,
     ContainerComponent,
     CardsComponent,
-    BuscaComponent
+    BuscaComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

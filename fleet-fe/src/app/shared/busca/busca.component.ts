@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Veiculos } from 'src/app/model/veiculos.model';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-busca',
@@ -12,7 +14,7 @@ export class BuscaComponent implements OnInit {
 
   public buscar!: string | number;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -37,7 +39,7 @@ export class BuscaComponent implements OnInit {
     }
   }
   adicionar(){
-
+    this.dialog.open(ModalComponent)
   }
 
 }
