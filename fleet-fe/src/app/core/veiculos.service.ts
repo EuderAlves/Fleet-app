@@ -19,7 +19,10 @@ export class VeiculosService {
     return this.httpClient.get<Veiculos[]>(`${this.apiUrl}/veiculos`)
   }
   salvarNovoVeiculo(newVeiculo:Veiculos): Observable<Veiculos> {
-    debugger;
     return this.httpClient.post<Veiculos>(`${this.apiUrl}/veiculos`,newVeiculo)
   }
+  delete(id:number): Observable<number> {
+    return this.httpClient.delete<number>(`${this.apiUrl}/veiculos/${id}`)
+  }
+
 }

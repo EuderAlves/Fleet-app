@@ -10,7 +10,10 @@ import { VeiculosService } from 'src/app/core/veiculos.service';
 export class ModalComponent implements OnInit {
   formGroup!: FormGroup;
 
-  constructor(private formiBuilder: FormBuilder,private veiculosService: VeiculosService ) {
+  constructor(
+    private formiBuilder: FormBuilder,
+    private veiculosService: VeiculosService
+  ) {
     this.formGroup = this.formiBuilder.group({
       marca: [null, Validators.required],
       modelo: [null, Validators.required],
@@ -32,7 +35,7 @@ export class ModalComponent implements OnInit {
   salvar() {
     if(this.formGroup.valid){
       this.veiculosService.salvarNovoVeiculo(this.formGroup.value).subscribe((resp)=>{
-        console.log(resp)
+        resp
       })
     }
     console.log(this.formGroup.value)

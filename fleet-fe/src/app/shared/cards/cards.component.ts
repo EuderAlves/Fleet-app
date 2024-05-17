@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { VeiculosService } from 'src/app/core/veiculos.service';
 
 @Component({
   selector: 'app-cards',
@@ -18,12 +19,16 @@ export class CardsComponent implements OnInit {
 @Input() renavam:number =0
 @Input() id:number =0
 
-  constructor(){}
+  constructor(private veiculosService: VeiculosService){}
+
 
   ngOnInit(): void {
 
   }
   remover(id:number){
+    this.veiculosService.delete(id).subscribe((resp)=>{
+     resp
+    })
 
   }
 }

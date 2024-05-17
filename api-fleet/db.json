@@ -38,19 +38,6 @@
       "kilometragem": 33060,
       "placa": "MON6559",
       "renavam": 82961870820
-    },
-    {
-      "marca": "testemarca",
-      "modelo": "testemodelo",
-      "versao": "teste para todos",
-      "anoFabricacao": "2021",
-      "anoModelo": "2024",
-      "cor": "preto",
-      "blindado": null,
-      "kilometragem": 12345,
-      "placa": "13215d",
-      "renavam": "321asd5f",
-      "id": 4
     }
   ],
   "user": [
