@@ -1,1 +1,30 @@
-<p>cards works!</p>
+<mat-card class="card">
+  <div class="row col-12">
+    <div class="d-flex justify-content-between">
+      <div class="col-9 marca"><strong>{{marca}}</strong>
+        <span class="modelo">{{modelo}}</span>
+      </div>
+      <div class="col-3"><button class="botao-remove" mat-stroked-button (click)="remover(id)"><mat-icon>delete</mat-icon>Remove</button></div>
+    </div>
+  </div>
+  <div class="row col-12">
+    <div class="d-flex justify-content-start">
+      <div class="col-8"><strong>Versão: </strong>{{versao}}</div>
+      <div class="col-4"><strong>Ano: </strong>{{anoFabricacao}}/{{anoModelo}}</div>
+    </div>
+  </div>
+  <div class="row col-12">
+    <div class="d-flex justify-content-start">
+      <div class="col-4"><strong>cor: </strong>{{cor}}</div>
+      <div class="col-4"><strong>Blindado: </strong>{{blindado}}</div>
+      <div class="col-4"><strong>KM: </strong>{{kilometragem}}</div>
+    </div>
+  </div>
+  <div class="row col-12">
+    <div class="d-flex justify-content-start">
+      <div class="col-4"><strong>Placa: </strong>{{placa}}</div>
+      <div class="col-4"><strong>Renavam: </strong>{{renavam}}</div>
+    </div>
+  </div>
+
+</mat-card>

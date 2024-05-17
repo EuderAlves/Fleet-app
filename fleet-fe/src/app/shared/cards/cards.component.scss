@@ -1,0 +1,35 @@
+.card {
+  width: 1, 232px;
+  padding: 16px 24px 16px 24px;
+  gap: 8px;
+  opacity: 0px;
+  margin-bottom: 20px;
+
+  .marca {
+    //styleName: H4/medium;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #000000D9;
+  }
+
+  .modelo {
+    margin-left: 2px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #8E8E8E;
+  }
+
+  .botao-remove {
+    padding: 6.4px 15px 6.4px 15px;
+    border: 1px 0px 0px 0px #FF4D4F;
+    opacity: 0px;
+    color: #FF4D4F;
+  }
+
+}
