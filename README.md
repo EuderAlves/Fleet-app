@@ -85,3 +85,6 @@ Para filtrar os veiculos em `GET /veiculos`, é possível:
 
 EsLint 100% :
 ![alt text](image.png)
+
+Execução testes:
+![alt text](image-1.png)
