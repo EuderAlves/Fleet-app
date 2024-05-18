@@ -12,14 +12,14 @@ describe('VeiculosService', () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let httpClient: HttpClient;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
         VeiculosService,
         { provide: HttpClient, useValue: mockHttpClient },
       ],
-    });
+    }).compileComponents();
     service = TestBed.inject(VeiculosService);
     httpClient = TestBed.inject(HttpClient);
   });
@@ -29,7 +29,7 @@ describe('VeiculosService', () => {
   });
 
   it('should return a list of vehicles (success)', () => {
-    expect(service.listarVeituclos()).toBeUndefined();
+    expect(service.listaVeiculos()).toBeUndefined();
   });
 
   it('should create a new vehicle (success)', () => {

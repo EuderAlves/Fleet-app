@@ -5,24 +5,23 @@ import { environment } from 'src/environments/environment';
 import { Veiculos } from '../model/veiculos.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class VeiculosService {
+  private apiUrl: string = environment.apiUrl;
 
-  private apiUrl: string = environment.apiUrl
+  constructor(private httpClient: HttpClient) { }
 
-  constructor(
-    private httpClient: HttpClient
-  ) { }
-
-  listarVeituclos(): Observable<Veiculos[]> {
-    return this.httpClient.get<Veiculos[]>(`${this.apiUrl}/veiculos`)
+  listaVeiculos(): Observable<Veiculos[]> {
+    return this.httpClient.get<Veiculos[]>(`${this.apiUrl}/veiculos`);
   }
-  salvarNovoVeiculo(newVeiculo:Veiculos): Observable<Veiculos> {
-    return this.httpClient.post<Veiculos>(`${this.apiUrl}/veiculos`,newVeiculo)
+  salvarNovoVeiculo(newVeiculo: Veiculos): Observable<Veiculos> {
+    return this.httpClient.post<Veiculos>(
+      `${this.apiUrl}/veiculos`,
+      newVeiculo
+    );
   }
-  delete(id:number): Observable<number> {
-    return this.httpClient.delete<number>(`${this.apiUrl}/veiculos/${id}`)
+  delete(id: number): Observable<number> {
+    return this.httpClient.delete<number>(`${this.apiUrl}/veiculos/${id}`);
   }
-
 }

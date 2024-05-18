@@ -8,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public listaVeiculos: Veiculos[] = [];
-  public listaAtualizadaVeiculos: Veiculos[] = [];
+  listaVeiculos: Veiculos[] = [];
+  listaAtualizadaVeiculos: Veiculos[] = [];
   constructor(private veiculosService: VeiculosService) { }
 
   ngOnInit(): void {
     this.listarVeiculos()
   }
-  listarVeiculos() {
-    this.veiculosService.listarVeituclos().subscribe((resp) => {
+
+  listarVeiculos(){
+
+    this.veiculosService.listaVeiculos().subscribe((resp) => {
+      console.warn("AKAKSKAKSAKSKAKSKAKSAK!!!!!!!!!!!!!!!")
       this.listaVeiculos = resp
       this.listaAtualizadaVeiculos = resp
     })
