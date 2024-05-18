@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   listarVeiculos(){
 
     this.veiculosService.listaVeiculos().subscribe((resp) => {
-      console.warn("AKAKSKAKSAKSKAKSKAKSAK!!!!!!!!!!!!!!!")
       this.listaVeiculos = resp
       this.listaAtualizadaVeiculos = resp
     })
