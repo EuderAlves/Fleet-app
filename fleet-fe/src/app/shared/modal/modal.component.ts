@@ -26,7 +26,7 @@ export class ModalComponent  {
       anoFabricacao: [null, Validators.required],
       anoModelo: [null, Validators.required],
       cor: [null, Validators.required],
-      blindado: [null],
+      blindado: [false],
       kilometragem: [null, Validators.required],
       placa: [null, Validators.required],
       renavam: [null, Validators.required]

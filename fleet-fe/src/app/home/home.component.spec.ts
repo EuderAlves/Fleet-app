@@ -2,18 +2,23 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { VeiculosService } from '../core/veiculos.service';
 import { NO_ERRORS_SCHEMA} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+const mockHttpClient = jasmine.createSpyObj('HttpClient', ['get', 'post', 'delete']);
 describe('HomeComponent', () => {
   let component:HomeComponent
   let fixture: ComponentFixture<HomeComponent>;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let service: VeiculosService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  let httpClient: HttpClient;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
       declarations: [HomeComponent],
       providers: [
         { provide: VeiculosService, useValue: {} },
-        { provide: HomeComponent, useValue: {} }
+        { provide: HomeComponent, useValue: {} },VeiculosService,
+        { provide: HttpClient, useValue: mockHttpClient },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(HomeComponent);
