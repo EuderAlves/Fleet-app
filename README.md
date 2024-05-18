@@ -84,3 +84,15 @@ EsLint 100% :
 
 Execução testes:
 ![alt text](image-1.png)
+
+Tela inicial da aplicação:
+![alt text](image-2.png)
+
+Aplicação realiza filtro de carro ao digitar as especificações no campo "Busca":
+![alt text](image-3.png)
+
+Opção para adicionar um novo carro clicando no botão "+ Add", após preencher as informações e salvar ele irá aparece na tela inicial.:
+![alt text](image-4.png)
+
+Opção de remover carro no botão "Remover":
+![alt text](image-5.png)
