@@ -11,8 +11,6 @@ describe('HomeComponent', () => {
   let fixture: ComponentFixture<HomeComponent>;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let service: VeiculosService;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  let httpClient: HttpClient;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],

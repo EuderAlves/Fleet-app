@@ -16,7 +16,6 @@ export class BuscaComponent  {
 
   constructor(public dialog: MatDialog) { }
 
-
   filtroVeiculos(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
     if (filterValue != undefined) {

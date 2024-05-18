@@ -16,6 +16,7 @@ import { BuscaComponent } from './shared/busca/busca.component';
 import { ModalComponent } from './shared/modal/modal.component';
 
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     HttpClientModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    MatDialogModule
   ],
   providers: [
     HomeComponent,

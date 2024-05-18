@@ -14,8 +14,6 @@ describe('ModalComponent', () => {
   let fixture: ComponentFixture<ModalComponent>;
    // eslint-disable-next-line @typescript-eslint/no-unused-vars
    let service: VeiculosService;
-   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-   let httpClient: HttpClient;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
