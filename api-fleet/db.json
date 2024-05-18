@@ -39,19 +39,5 @@
       "placa": "MON6559",
       "renavam": 82961870820
     }
-  ],
-  "user": [
-    {
-      "id": 1,
-      "nome": "ADM",
-      "senha": "1234",
-      "type": "adm"
-    },
-    {
-      "id": 2,
-      "nome": "ADM2",
-      "senha": "12345",
-      "type": "view"
-    }
   ]
 }

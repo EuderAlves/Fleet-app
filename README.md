@@ -44,7 +44,7 @@ npm start
 
 ### <a name="_960iv08rgjz0"></a>**API:**
 
-A API utilizada pelo FLEET está na pasta api--fleet-fake. Para executá-la, siga os passos:
+A API utilizada pelo FLEET está na pasta api-fleet. Para executá-la, siga os passos:
 
 1. Clone o repositório do projeto:
    git clone https://github.com/EuderAlves/Fleet-app.git
@@ -71,10 +71,6 @@ npx json-server db.json
 - `GET /veiculos` : lista os veículos cadastrados
 - `POST /veiculos` : cria um novo veiculo
 - `DELETE /veiculos/:id` : apaga o veiculo com ID :id
-
-- `GET /user` : lista os usuários cadastrados
-- `POST /user` : cria um novo usuário
-- `DELETE /user/:id` : apaga o usuário com ID :id
 
 Para filtrar os veiculos em `GET /veiculos`, é possível:
 
