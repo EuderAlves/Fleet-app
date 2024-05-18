@@ -17,8 +17,6 @@ input::-webkit-inner-spin-button {
 }
 
 .botao-salvar {
-  margin-top: 10px;
-  width: 70%;
   padding: 6.4px 15px 6.4px 15px;
   background-color: #096DD9 !important;
   color: #FFFFFF !important;
@@ -26,7 +24,7 @@ input::-webkit-inner-spin-button {
 
 .botao-cancel{
   padding: 6.4px 15px 6.4px 15px;
-  border: 1px 0px 0px 0px #FF4D4F;
+  border: 1px 0px 0px 0px  #FF4D4F !important;
   opacity: 0px;
-  color: #FF4D4F;
+  color: #FF4D4F !important;
 }

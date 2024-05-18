@@ -1,6 +1,6 @@
 <app-container>
   <app-banner title="FLEET" subTitle="Controle de frotas para empresas"></app-banner>
-  <app-busca [listaVeiculos]="listaVeiculos" (newListVeiculos)="newListVwiculos($event)"></app-busca>
+  <app-busca [listaVeiculos]="listaVeiculos" (newListVeiculos)="newListVeiculos($event)"></app-busca>
   <app-cards *ngFor="let veiculo of listaAtualizadaVeiculos" [id]="veiculo.id" [marca]="veiculo.marca" [modelo]="veiculo.modelo" [versao]="veiculo.versao" [anoFabricacao]="veiculo.anoFabricacao"
     [anoModelo]="veiculo.anoModelo" [cor]="veiculo.cor" [blindado]="veiculo.blindado" [kilometragem]="veiculo.kilometragem" [placa]="veiculo.placa"
     [renavam]="veiculo.renavam"></app-cards>

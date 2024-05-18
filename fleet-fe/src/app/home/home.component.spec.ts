@@ -69,7 +69,7 @@ describe('HomeComponent', () => {
     const spyServ = spyOn(service, 'listaVeiculos').and.callFake(() => {
       return of(mockVeiculos)
     }).and.returnValue(of(mockVeiculos));
-    component.newListVwiculos(mockVeiculos);
+    component.newListVeiculos(mockVeiculos);
     fixture.detectChanges()
     expect(spyServ).toBeTruthy()
     expect(component.listaVeiculos).toEqual(mockVeiculos);
